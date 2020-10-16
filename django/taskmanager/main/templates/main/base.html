@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<header class="page-header bg-dark">
+    <div class="page-header__wrapper pt-2 pb-2 mb-4 mb-md-=">
+        <nav class="site-header sticky-top py-1">
+            <div class="container d-flex flex-column flex-md-row">
+                <a class="logo d-flex align-center py-2" href="{% url 'home' %}" aria-label="Product">
+                    <i class="mr-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#fff"
+                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto"
+                             role="img"
+                             viewBox="0 0 24 24" focusable="false"><title>StackBro</title>
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
+                        </svg>
+                    </i>
+                    <span class="logo__name text-white">StackBro</span>
+                </a>
+                <div class="d-flex w-100 justify-content-end">
+                    <a class="py-2 d-none d-md-inline-block text-white" href="{% url 'about' %}">About Us</a>
+                    <a class="py-2 ml-4 d-none d-md-inline-block text-white" href="{% url 'create' %}">Create Task</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main role="main" class="flex-shrink-0">
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</main>
+
+<footer class="container mt-5">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2020 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>
+
+</body>
+</html>

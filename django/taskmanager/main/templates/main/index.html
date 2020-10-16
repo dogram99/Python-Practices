@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Tasks:</h1>
+    {% if tasks %}
+        {% for el in tasks %}
+            <div class="alert alert-primary mt-2" role="alert">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.task }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-warning" role="alert">
+             <span class="h2 mr-3">404</span>
+        </div>
+    {% endif %}
+{% endblock %}

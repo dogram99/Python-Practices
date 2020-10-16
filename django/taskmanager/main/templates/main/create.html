@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Create Task | Django
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class=" mb-3">Create Task</h1>
+        <form method="post">
+            {% csrf_token %}
+            <p>
+                {{ form.title }}
+            </p>
+            <p>
+                {{ form.task }}
+            </p>
+            <p>
+                <button class="btn btn-success" type="submit">Add task</button>
+            </p>
+            <span>{{ error  }}</span>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
