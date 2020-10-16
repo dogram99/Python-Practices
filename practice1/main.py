@@ -8,8 +8,8 @@ def main():
 
 
 def fun(*args, **kwargs):
-    print(args)
-    print(kwargs)
+    print(f'args = {args}')
+    print(f'kwargs = {kwargs}')
 
 
-main()
+fun()
