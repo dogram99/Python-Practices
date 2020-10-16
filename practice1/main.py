@@ -1,4 +1,4 @@
-from practice.factorial import *
+from practice1.factorial import *
 
 
 def main():

@@ -1,6 +1,4 @@
 from tkinter import *
-from tkinter.messagebox import showinfo
-import random
 
 win = Tk()
 win.geometry('400x200')

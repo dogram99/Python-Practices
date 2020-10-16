@@ -1,5 +1,5 @@
 import unittest
-from practice.factorial import *
+from practice1.factorial import *
 
 
 class TestStringMethods(unittest.TestCase):

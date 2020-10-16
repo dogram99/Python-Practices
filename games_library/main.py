@@ -1,6 +1,3 @@
-from accessify import *
-
-
 class GamesLibrary:
     games = []
     game_id = 0
